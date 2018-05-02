@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="blankDisc" class="com.springinaction.ch2.BlankDisc"
+        c:_0="Lonely Hearts Club"
+        c:_1="The Beatles">
+        <constructor-arg>
+            <list>
+                <value>With a Little Help from My Friend</value>
+                <value>Lucy in the Sky with Diamonds</value>
+                <value>Getting Better</value>
+                <value>Fixing a Hole</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
