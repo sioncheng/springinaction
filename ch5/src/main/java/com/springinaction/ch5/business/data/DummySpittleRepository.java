@@ -18,4 +18,8 @@ public class DummySpittleRepository implements SpittleRepository {
 
         return spittles;
     }
+
+    public Spittle findOne(long spittleId) {
+        return null;
+    }
 }
