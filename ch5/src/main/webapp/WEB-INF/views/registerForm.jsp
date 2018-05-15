@@ -12,6 +12,7 @@
         Last Name: <input type="text" name="lastName" /> <br/>
         Username: <input type="text" name="username" /> <br/>
         Password: <input type="password" name="password" /> <br/>
+        Profile Picture：<input type="file" name="profilePicture" accept="image/jpeg, image/png, image/gif" />
         <input type="submit" value="Register" />
     </form>
 </body>

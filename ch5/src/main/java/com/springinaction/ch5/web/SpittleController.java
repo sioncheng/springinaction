@@ -37,7 +37,11 @@ public class SpittleController {
 
     @RequestMapping(value = "/{spittleId}", method=RequestMethod.GET)
     public String spittle(@PathVariable long spittleId, Model model) {
-        model.addAttribute("spittle", spittleRepository.findOne(spittleId));
+        Spittle spittle = spittleRepository.findOne(spittleId);
+        if (spittle == null) {
+            throw new SpittleNotFoundException();
+        }
+        model.addAttribute("spittle", spittle);
         return "spittle";
     }
 
