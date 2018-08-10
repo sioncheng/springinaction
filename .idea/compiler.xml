@@ -6,13 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="aop" />
         <module name="ch2" />
         <module name="ch5" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="aop" target="1.5" />
       <module name="ch2" target="1.5" />
       <module name="ch5" target="1.5" />
+      <module name="springinaction" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
