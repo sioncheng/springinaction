@@ -72,6 +72,7 @@
         <module>ch2</module>
         <module>ch5</module>
         <module>aop</module>
+        <module>custom</module>
     </modules>
 
 </project>
