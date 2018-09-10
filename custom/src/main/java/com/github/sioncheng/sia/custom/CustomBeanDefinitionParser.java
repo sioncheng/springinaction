@@ -16,6 +16,7 @@ public class CustomBeanDefinitionParser implements BeanDefinitionParser {
         RootBeanDefinition rootBeanDefinition = new RootBeanDefinition();
         rootBeanDefinition.setLazyInit(false);
         rootBeanDefinition.setBeanClass(this.tClass);
+        rootBeanDefinition.setInitMethodName("init");
 
         String id = element.getAttribute("id");
         int x = Integer.parseInt(element.getAttribute("x"));
