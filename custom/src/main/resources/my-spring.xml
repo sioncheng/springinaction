@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
        http://www.github.com/sioncheng/schema/custom  http://www.github.com/sioncheng/schema/custom.xsd">
 
-
+    <bean id="myBeanPostProcessor" class="com.github.sioncheng.sia.custom.MyBeanPostProcessor" />
     <custom:point id="p1" x="1" y="2" />
 
 </beans>

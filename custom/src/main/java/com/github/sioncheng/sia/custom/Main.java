@@ -12,5 +12,6 @@ public class Main {
 
         System.out.println(pointBean);
 
+        ((ClassPathXmlApplicationContext) context).destroy();
     }
 }

@@ -4,10 +4,10 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.InitializingBean;
 
 public class PointBean implements
-        BeanNameAware, BeanFactoryAware, BeanPostProcessor {
+        BeanNameAware, BeanFactoryAware, InitializingBean {
 
     public PointBean() {
 
@@ -15,41 +15,28 @@ public class PointBean implements
 
     public void setBeanName(String s) {
         System.out.println("=============== set bean name " + s);
-        for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
-            System.out.println(ste);
-        }
+        Util.printCallstack();
     }
 
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("=============== set bean factory " + beanFactory);
-        for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
-            System.out.println(ste);
-        }
-    }
-
-    public Object postProcessBeforeInitialization(Object o, String s) throws BeansException {
-        System.out.println("=============== postProcessBeforeInitialization " + s);
-        for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
-            System.out.println(ste);
-        }
-
-        return o;
-    }
-
-    public Object postProcessAfterInitialization(Object o, String s) throws BeansException {
-        System.out.println("=============== postProcessAfterInitialization " + s);
-        for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
-            System.out.println(ste);
-        }
-
-        return o;
+        Util.printCallstack();
     }
 
     public void init() {
         System.out.println("=============== init");
-        for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
-            System.out.println(ste);
-        }
+        Util.printCallstack();
+    }
+
+    public void destroy() {
+        System.out.println("=============== destroy");
+        Util.printCallstack();
+    }
+
+
+    public void afterPropertiesSet() {
+        System.out.println("=============== after properties set");
+        Util.printCallstack();
     }
 
     public int getX() {
