@@ -12,6 +12,12 @@ public class Main {
 
         System.out.println(pointBean);
 
+        Car car = (Car) context.getBean("car");
+
+        System.out.println(car);
+
         ((ClassPathXmlApplicationContext) context).destroy();
+
+
     }
 }
