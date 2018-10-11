@@ -75,6 +75,7 @@
         <module>custom</module>
         <module>jm4</module>
         <module>jm5</module>
+        <module>jm23</module>
     </modules>
 
 </project>
