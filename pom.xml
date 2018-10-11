@@ -73,6 +73,8 @@
         <module>ch5</module>
         <module>aop</module>
         <module>custom</module>
+        <module>jm4</module>
+        <module>jm5</module>
     </modules>
 
 </project>

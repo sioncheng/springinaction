@@ -10,6 +10,8 @@
         <module name="ch2" />
         <module name="ch5" />
         <module name="custom" />
+        <module name="jm4" />
+        <module name="jm5" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +19,8 @@
       <module name="ch2" target="1.5" />
       <module name="ch5" target="1.5" />
       <module name="custom" target="1.5" />
+      <module name="jm4" target="1.5" />
+      <module name="jm5" target="1.5" />
       <module name="springinaction" target="1.5" />
     </bytecodeTargetLevel>
   </component>
