@@ -20,7 +20,7 @@
       <module name="ch2" target="1.5" />
       <module name="ch5" target="1.5" />
       <module name="custom" target="1.5" />
-      <module name="jm23" target="1.5" />
+      <module name="jm23" target="1.8" />
       <module name="jm4" target="1.5" />
       <module name="jm5" target="1.5" />
       <module name="springinaction" target="1.5" />

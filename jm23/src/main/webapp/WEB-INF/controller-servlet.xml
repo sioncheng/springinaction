@@ -4,17 +4,40 @@
        xsi:schemaLocation=" http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="maxUploadSize" value="10485760000" />
+        <property name="maxInMemorySize" value="40960" />
+    </bean>
 
-    <bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+    <bean id="handlerMapping0" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="order" value="2"></property>
+        <property name="mappings">
+            <value>/22/*.do=two</value>
+        </property>
+    </bean>
 
-    <!--
+    <bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+        <property name="order" value="1"></property>
+    </bean>
+
+
+    <bean name="/3/*.do" class="sia.jm23.Three"/>
     <bean name="/1/*.do" class="sia.jm23.One"/>
-    -->
+    <bean name="/file.do" class="sia.jm23.File"/>
+    <bean name="/fileupload.do" class="sia.jm23.FileUpload"/>
 
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <bean id="viewResolver1" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/view/"></property>
+        <property name="suffix" value=".html"></property>
+    </bean>
+
+    <bean id="viewResolver2" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
 
     <bean name="/2/*.do" class="sia.jm23.Two"/>
+    <bean name="two" class="sia.jm23.Two"/>
+
 </beans>

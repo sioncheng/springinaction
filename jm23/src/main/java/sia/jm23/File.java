@@ -5,19 +5,22 @@ import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.mvc.AbstractController;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
-public class One extends AbstractController {
+public class File extends AbstractController {
 
     @Override
-    protected ModelAndView handleRequestInternal(javax.servlet.http.HttpServletRequest httpServletRequest,
-                                                 javax.servlet.http.HttpServletResponse httpServletResponse)
-        throws Exception{
+    protected ModelAndView handleRequestInternal(HttpServletRequest request
+            , HttpServletResponse response)
+        throws Exception {
+
         ModelAndView modelAndView = new ModelAndView();
 
         View view = getApplicationContext()
                 .getBean("viewResolver1", InternalResourceViewResolver.class)
-                .resolveViewName("one", Locale.CHINA);
+                .resolveViewName("file", Locale.CHINA);
 
         modelAndView.setView(view);
 
