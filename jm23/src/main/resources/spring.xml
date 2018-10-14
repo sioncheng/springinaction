@@ -8,4 +8,6 @@
     <bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
 
     <bean name="/1.do" class="sia.jm23.One"/>
+
+
 </beans>

@@ -17,7 +17,7 @@
         </property>
     </bean>
 
-    <bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+    <bean id="handlerMapping1" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
         <property name="order" value="1"></property>
     </bean>
 
@@ -40,4 +40,5 @@
     <bean name="/2/*.do" class="sia.jm23.Two"/>
     <bean name="two" class="sia.jm23.Two"/>
 
+    <import resource="controller-servlet-2.xml"></import>
 </beans>
